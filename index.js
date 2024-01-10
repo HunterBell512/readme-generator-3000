@@ -5,11 +5,12 @@ const generateMarkdown = require('./utils/generateMarkdown.js')
 const questions = [
     'What is the name of your application?',
     'What does your application do?',
-    'Add an installation step?',
-    'What is your application used for?',
-    'Who are the contributors of the project?',
+    'List the installation steps (Enter as comma separated list):',
+    'What is your application used for? (Enter as comma separated list)',
+    'Who are the contributors of the project? (Enter as comma separated list)',
     'Which license would you like to use?',
-    'Type a command you can use to test your application',
+    'Enter some test commands you can use (Enter as comma separated list):',
+    'What is your first and last name?',
     'What is your GitHub username?',
     'What is your email address?'
 ];
@@ -38,52 +39,49 @@ function init() {
             },
             {
                 type: 'input',
+                name: 'installation',
+                message: questions[2]
+            },
+            {
+                type: 'input',
                 name: 'usage',
                 message: questions[3]
             },
             {
                 type: 'input',
-                name: 'contributions',
+                name: 'contributors',
                 message: questions[4]
             },
             {
                 type: 'rawlist',
                 name: 'license',
                 message: questions[5],
-                choices: ['MIT', 'Apache 2.0', 'GPL v3', 'MPL 2.0', 'BSD 3.0']
+                choices: ['MIT', 'Apache 2.0', 'GNU GPL v3', 'MPL 2.0', 'BSD 3-Clause']
             },
             {
                 type: 'input',
-                name: 'test',
+                name: 'tests',
                 message: questions[6]
             },
             {
                 type: 'input',
-                name: 'github',
+                name: 'fullName',
                 message: questions[7]
             },
             {
                 type: 'input',
-                name: 'email',
+                name: 'github',
                 message: questions[8]
             },
             {
-                type: 'loop',
-                name: 'installation',
-                message: questions[2],
-                questions: [
-                    {
-                        type: 'name',
-                        name: 'steps',
-                        message: 'Add the step:'
-                    }
-                ]
+                type: 'input',
+                name: 'email',
+                message: questions[9]
             }
         ]).then((answers) => {
             console.log(answers);
             writeToFile('./output/README.md', generateMarkdown(answers));
         });
 }
-
 // Function call to initialize app
 init();
