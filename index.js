@@ -77,7 +77,6 @@ function init() {
                 message: questions[9]
             }
         ]).then((answers) => {
-            console.log(answers);
             writeToFile(`./output/README.md`, generateMarkdown(answers));
         });
 }

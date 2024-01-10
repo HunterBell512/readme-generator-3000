@@ -9,7 +9,7 @@ function GenerateSample () {
         installation: 'Clone repository into folder of your choice, Open command window in cloned repository, Run test command listed below',
         usage: 'Listening to popular music, Sharing music with friends, Listening to music concurrently with other users',
         license: 'MIT',
-        tests: 'npm run test',
+        tests: 'npm run popular',
         fullName: 'John Doe',
         contributors: 'John Doe',
         github: 'JohnDoe123',
