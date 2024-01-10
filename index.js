@@ -23,8 +23,6 @@ function writeToFile(fileName, data) {
 }
 
 function init() {
-    inquirer.registerPrompt('loop', require('inquirer-loop')(inquirer));
-
     inquirer
         .prompt([
             {
