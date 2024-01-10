@@ -16,7 +16,11 @@ const questions = [
 ];
 
 function writeToFile(fileName, data) {
-    fs.writeFile(fileName, data, (err) => {
+    let dir = './output';
+    if (!fs.existsSync(dir)) {
+        fs.mkdirSync(dir);
+    }
+    fs.writeFile(dir + fileName, data, (err) => {
         if (err) throw err;
         console.log('readme successfully generated to the output folder!');
     })
@@ -77,7 +81,7 @@ function init() {
                 message: questions[9]
             }
         ]).then((answers) => {
-            writeToFile(`./output/README.md`, generateMarkdown(answers));
+            writeToFile(`/README.md`, generateMarkdown(answers));
         });
 }
 // Function call to initialize app
