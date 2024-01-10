@@ -1,8 +1,8 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-## README Generator 3000
+# Musify
 
 ## Description
-Generates a professional readme file.
+Streamlines the music listening process.
   
 ## Table of Contents
 - [Installation](#installation)
@@ -16,30 +16,29 @@ Generates a professional readme file.
 ![preview](./assets/images/preview.png)
   
 ## Installation
-1. Clone the repository into folder of your choice
-2. Open a command window in the cloned repository
-3. Run command 'npm install'
-4. Run command 'npm start'
+1. Clone repository into folder of your choice
+2. Open command window in cloned repository
+3. Run test command listed below
   
 ## Usage
-- Generating a professional readme
-- Streamlining the readme writing process
-- Reduce tedium of writing readmes
+- Listening to popular music
+- Sharing music with friends
+- Listening to music concurrently with other users
 
 ## Tests
 Here are some tests to run to verify a proper install:
 ```bash
-npm run sample
+npm run test
 ```
 
 ## Contributors
-- Hunter Bell
+- John Doe
 
 ## Questions
 If you have any questions, please reach out!
-- Github: [HunterBell512](https://github.com/HunterBell512)
-- Email: [bellhunter512@gmail.com](mailto:bellhunter512@gmail.com)
+- Github: [JohnDoe123](https://github.com/JohnDoe123)
+- Email: [johndoe123@email.com](mailto:johndoe123@email.com)
 
 ## License
-Copyright (c) 2024 Hunter Bell
+Copyright (c) 2024 John Doe
 Licensed under the MIT license.

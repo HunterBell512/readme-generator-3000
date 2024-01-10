@@ -42,26 +42,25 @@ function renderLicenseSection(license, fullName) {
   switch (license) {
     case 'MIT':
       return `Copyright (c) ${date.getFullYear()} ${fullName}
-  Licensed under the MIT license.`;
+Licensed under the MIT license.`;
     case 'Apache 2.0':
       return `Copyright (c) ${date.getFullYear()} ${fullName} 
-  Licensed under the Apache 2.0 license.`;
+Licensed under the Apache 2.0 license.`;
     case 'GNU GPL v3':
       return `Copyright (c) ${date.getFullYear()} ${fullName} 
-  Licensed under the GNU GPL v3 license.`;
+Licensed under the GNU GPL v3 license.`;
     case 'MPL 2.0':
       return `Copyright (c) ${date.getFullYear()} ${fullName} 
-  Licensed under the MPL 2.0 license.`;
+Licensed under the MPL 2.0 license.`;
     case 'BSD 3-Clause':
       return `Copyright (c) ${date.getFullYear()} ${fullName} 
-  Licensed under the BSD 3-Clause license.`;
+Licensed under the BSD 3-Clause license.`;
     default:
       return '';
   }
 }
 
 function generateMarkdown(data) {
-  let stepNum = 0;
   return `${renderLicenseBadge(data.license)}
 # ${data.title}
 
@@ -77,7 +76,7 @@ ${data.description}
 - [License](#license)
 
 ## Preview
-![preview]('./assets/images/preview.png')
+![preview](./assets/images/preview.png)
   
 ## Installation
 ${SeparateList(data.installation, 'numeric')}
@@ -104,4 +103,4 @@ ${renderLicenseSection(data.license, data.fullName)}
 `;
 }
 
-module.exports = generateMarkdown;
+module.exports = generateMarkdown, renderLicenseBadge, renderLicenseSection;

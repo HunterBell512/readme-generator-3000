@@ -80,7 +80,7 @@ function init() {
             }
         ]).then((answers) => {
             console.log(answers);
-            writeToFile('./output/README.md', generateMarkdown(answers));
+            writeToFile(`./output/README.md`, generateMarkdown(answers));
         });
 }
 // Function call to initialize app
